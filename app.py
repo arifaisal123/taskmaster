@@ -1,4 +1,3 @@
-# Tutorial Credit: https://www.youtube.com/watch?v=Z1RJmh_OqeA&list=WL&index=1&t=8s (FreeCodeCamp)
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
