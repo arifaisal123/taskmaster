@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 
 {% block head %}
-<title>Task Master</title>
+Update
 {% endblock %}
 
 {% block body %}
 <div class="content">
     <h1>Update Task</h1>
+    {% if tasks|length >= 1 %}
     <table>
         <tr>
             <th>Task</th>
@@ -24,6 +25,7 @@
                 </td>
             </tr>
         {% endfor %}
+    {% endif %}
     </table>
     <form actions="/update/{{task.id}}" method="POST">
         <input id="content" name="content" type="text" value="{{task.content}}">

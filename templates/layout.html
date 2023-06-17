@@ -5,9 +5,23 @@
         <meta content="initial-scale=1.0, width=device-width" name="viewport">
         <meta content="ie=edge" http-equiv="X-UA-Compatible">
         <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
-        {% block head %}{% endblock %}
+        <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}"/>
+        <title>Task Master | {% block head %}{% endblock %}</title>
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header>
+            <h1>Task Master</h1>
+        </header>
+        <div class="main-container">            
+            <main>
+                {% block body %}{% endblock %}
+            </main>  
+        </div>
+        <footer>
+            <p>
+                Coded by <a href="https://arifaisal123.github.io">Arif Faisal</a>.
+                Favicon by <a href="https://www.flaticon.com/free-icon/planning_7792148?term=task+manager&page=1&position=10&origin=search&related_id=7792148" target="_blank">Flaticon</a>.
+            </p>
+        </footer>  
     </body>
 </html>
